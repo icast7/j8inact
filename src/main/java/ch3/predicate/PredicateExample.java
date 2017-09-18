@@ -1,10 +1,9 @@
 package ch3.predicate;
 
-import ch2.predicate.Predicate;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class PredicateExample {
     public static <T> List<T> filter(List<T> list, Predicate<T> p) {

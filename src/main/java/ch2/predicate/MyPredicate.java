@@ -1,5 +1,5 @@
 package ch2.predicate;
 
-public interface Predicate<T> {
+public interface MyPredicate<T> {
     boolean test(T t);
 }

@@ -1,17 +1,16 @@
 package ch2.predicate;
 
+import ch2.Apple;
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import ch2.Apple;
-import ch2.predicate.Predicate;
-import com.google.gson.Gson;
-
-public class Filter {
+public class MyFilter {
     final static Gson gson = new Gson();
 
-    public static <T> List<T> filter(List<T> list, Predicate<T> p) {
+    public static <T> List<T> filter(List<T> list, MyPredicate<T> p) {
         List<T> result = new ArrayList<>();
         for (T e : list) {
             if (p.test(e)) {
