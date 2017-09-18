@@ -1,4 +1,6 @@
-package ch2;
+package ch2.apple;
+
+import ch2.Apple;
 
 import java.util.Arrays;
 import java.util.List;
