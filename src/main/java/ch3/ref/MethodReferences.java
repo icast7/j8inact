@@ -1,4 +1,4 @@
-package ch3;
+package ch3.ref;
 
 import java.util.List;
 import java.util.function.BiPredicate;

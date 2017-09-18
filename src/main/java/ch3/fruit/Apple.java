@@ -1,6 +1,6 @@
-package ch3;
+package ch3.fruit;
 
-public class Apple {
+public class Apple implements Fruit {
     public int weight;
     public String color;
 
