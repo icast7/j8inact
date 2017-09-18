@@ -19,5 +19,6 @@ public class LambdaRunnable {
         process(r1);
         process(r2);
         process(() -> System.out.println("Hello World 3"));
+        process(()->{/** DO NOTHING **/});
     }
 }
