@@ -1,12 +1,11 @@
 package ch2.real;
 
-import ch2.Apple;
 import com.google.gson.Gson;
-
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
+import ch2.Apple;
 
 public class RealWorld {
     final static Gson gson = new Gson();

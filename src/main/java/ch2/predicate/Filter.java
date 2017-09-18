@@ -1,10 +1,11 @@
 package ch2.predicate;
 
-import ch2.Apple;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import ch2.Apple;
+import ch2.predicate.Predicate;
 import com.google.gson.Gson;
 
 public class Filter {
