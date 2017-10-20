@@ -1,5 +1,6 @@
 package ch4;
 
+import ch4.util.Dish;
 import com.google.gson.Gson;
 
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.Map;
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
 
-public class Stream1 {
+public class _1SimpleAndParallelStreams {
     final static Gson gson = new Gson();
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ch4;
+package ch4.util;
 
 import java.util.Arrays;
 import java.util.List;

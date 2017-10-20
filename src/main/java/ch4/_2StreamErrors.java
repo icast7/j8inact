@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class StreamErrors {
+public class _2StreamErrors {
     public static void main(String[] args) {
         try {
             List<String> title = Arrays.asList("Java8", "In", "Action");
