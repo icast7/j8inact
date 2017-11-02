@@ -25,5 +25,34 @@ public class Mapping {
         System.out.println("\nDish name length map:");
         List<Integer> dishNameLengths = menu.stream().map(Dish::getName).map(String::length).collect(toList());
         System.out.println(gson.toJson(dishNameLengths));
+
+        System.out.println("\nFlat map:");
+        List<String> uniqueCharacters = words.stream()
+                        .map(w -> w.split(""))
+                        .flatMap(Arrays::stream)
+                        .distinct()
+                        .collect(toList());
+        System.out.println(gson.toJson(uniqueCharacters));
+
+        System.out.println("\nSquares:");
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        List<Integer> squares = numbers.stream().map(n -> n * n).collect(toList());
+        System.out.println(gson.toJson(squares));
+
+        System.out.println("\nPairs of numbers:");
+        List<Integer> numbers1 = Arrays.asList(1, 2, 3);
+        List<Integer> numbers2 = Arrays.asList(5, 6);
+        List<int[]> pairs = numbers1.stream()
+                        .flatMap(i -> numbers2.stream().map(j -> new int[] { i, j }))
+                        .collect(toList());
+        System.out.println(gson.toJson(pairs));
+
+        System.out.println("\nPairs of numbers whose sum is divisible by 3:");
+        List<Integer> numbers3 = Arrays.asList(1, 2, 3);
+        List<Integer> numbers4 = Arrays.asList(5, 6);
+        List<int[]> pairsDivisibleBy3 = numbers3.stream()
+                        .flatMap(i -> numbers4.stream().filter(j -> (i + j) % 3 == 0).map(j -> new int[] { i, j }))
+                        .collect(toList());
+        System.out.println(gson.toJson(pairsDivisibleBy3));
     }
 }
