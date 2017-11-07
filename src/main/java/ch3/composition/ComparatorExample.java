@@ -15,8 +15,9 @@ public class ComparatorExample {
         List<Apple> inventory = Arrays.asList(
                 new Apple(9, "red", "CN"),
                 new Apple(10, "red", "CN"),
-                new Apple(10, "green", "MX"),
-                new Apple(10, "yellow", "US")
+                new Apple(15, "green", "MX"),
+                new Apple(12, "yellow", "US"),
+                new Apple(8, "golden", "CA")
         );
 
         inventory.sort(comparing(Apple::getWeight).reversed().thenComparing(Apple::getCountry));
