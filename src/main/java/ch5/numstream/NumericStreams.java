@@ -30,5 +30,13 @@ public class NumericStreams {
 
         IntStream evenNumbersExc = IntStream.range(1, 100).filter(n -> n % 2 == 0);
         System.out.println("Even numbers count (exclusive): " + evenNumbersExc.count());
+
+
+        System.out.println("Pythagorean  Triples: ");
+        Stream<int[]> pythagoreanTriples = IntStream.rangeClosed(1, 100).boxed().flatMap(a ->
+        IntStream.rangeClosed(a, 100).filter(b-> Math.sqrt(a*a + b*b) % 1 ==0).mapToObj(b-> new int[] {a,b, (int)Math.sqrt(a*a + b*b)}));
+        pythagoreanTriples.limit(5).forEach(t -> System.out.println(t[0]+", " + t[1]+", " + t[2]));
+
+
     }
 }
