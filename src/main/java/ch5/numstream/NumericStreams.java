@@ -2,6 +2,7 @@ package ch5.numstream;
 
 import ch4.util.Dish;
 
+import java.util.OptionalInt;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -19,5 +20,15 @@ public class NumericStreams {
         Stream<Integer> stream = intStream.boxed();
         System.out.println("All ints as Integers:r");
         stream.forEach(System.out::println);
+
+        OptionalInt maxCalories = menu.stream().mapToInt(Dish::getCalories).max();
+        int max = maxCalories.orElse(1);
+        System.out.println("Max calories: " + max);
+
+        IntStream evenNumbersInc = IntStream.rangeClosed(1, 100).filter(n -> n % 2 == 0);
+        System.out.println("Even numbers count (inclusive): " + evenNumbersInc.count());
+
+        IntStream evenNumbersExc = IntStream.range(1, 100).filter(n -> n % 2 == 0);
+        System.out.println("Even numbers count (exclusive): " + evenNumbersExc.count());
     }
 }
