@@ -1,4 +1,4 @@
-package ch5;
+package ch5.allops;
 
 import java.util.Arrays;
 import java.util.List;
@@ -10,7 +10,7 @@ import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
-public class all {
+public class All {
     static Trader raoul = new Trader("Raoul", "Cambridge");
     static Trader mario = new Trader("Mario", "Milan");
     static Trader alan = new Trader("Alan", "Cambridge");
