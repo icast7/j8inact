@@ -20,7 +20,7 @@ public class ComparatorExample {
                 new Apple(8, "golden", "CA")
         );
 
-        inventory.sort(comparing(Apple::getWeight).reversed().thenComparing(Apple::getCountry));
+        inventory.sort(comparing(Apple::getWeight).reversed().thenComparing(Apple::getCountry).reversed());
         inventory.forEach(a ->System.out.println(gson.toJson(a)));
     }
 }
