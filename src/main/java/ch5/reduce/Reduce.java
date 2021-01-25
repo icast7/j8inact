@@ -44,5 +44,8 @@ public class Reduce {
         long count= menu.stream().count();
         System.out.println("\nCount menu items:" + count);
 
+        int sumReduce = numbers.parallelStream().reduce(0, Integer::sum);
+        System.out.println("\nSum reduce:" + sumReduce);
+
     }
 }
